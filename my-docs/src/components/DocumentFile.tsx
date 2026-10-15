@@ -54,13 +54,60 @@ export default function DocumentFile({
       aria-label={title}
     >
       <div className="reader-toolbar">
-        <span>{t(pdf ? "PDF document" : "Document attachment")}</span>
+        <span className="reader-toolbar-title">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 1.5h5.5L13 5v9.5H4z" />
+            <path d="M9.5 1.5V5H13" />
+          </svg>
+          {t(pdf ? "PDF document" : "Document attachment")}
+        </span>
         <div className="reader-actions">
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            {t("Open file ↗")}
+          <a
+            className="reader-link"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("Open file")}
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7.5 8.5" />
+            </svg>
           </a>
           <a className="download-button" href={url} download>
-            {t("Download ↓")}
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M8 2.5v8m0 0 3-3m-3 3-3-3M3 13.5h10" />
+            </svg>
+            {t("Download")}
           </a>
         </div>
       </div>

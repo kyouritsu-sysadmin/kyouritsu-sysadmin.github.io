@@ -1,11 +1,11 @@
 {
-  "item.label.Document library": {
-    "message": "資料ライブラリ"
+  "item.label.Documents": {
+    "message": "資料"
   },
-  "item.label.Divisions": {
+  "item.label.Departments": {
     "message": "部門"
   },
-  "item.label.Library guide": {
+  "item.label.How to use": {
     "message": "使い方"
   }
 }

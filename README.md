@@ -69,7 +69,7 @@ Edit `portal/portal.config.json`. Manuals is available; Training Guide, Company 
 
 Edit `my-docs/src/data/catalog.json`. The company directory contains 25 entries: 13 top-level departments, groups, and branches and 12 child sections. Each entry has an English `name`, `japanese` name, and `romaji`; sections reference their department using `parent`. Japanese display text lives in `src/data/locales/ja.json`. The generator validates parent references, cycles, and Japanese names and refreshes document sidebar translations.
 
-The navigation and department cards show the hierarchy. Department libraries include documents from their sections; each section also has its own library. Search accepts English, Japanese, and romaji, with or without macrons. For example, `/manuals/design/` contains links to `/manuals/electrical-design/` and `/manuals/structural-design/`.
+The sidebar tree and the department directory on the library home show the hierarchy, with the Japanese name (or English name in the Japanese locale) under each department. Department libraries include documents from their sections; each section also has its own library. The library home lists documents in a table sorted by last update. Search accepts English, Japanese, and romaji, with or without macrons. For example, `/manuals/design/` contains links to `/manuals/electrical-design/` and `/manuals/structural-design/`.
 
 Head Office Sales (本社営業) retains the `sales` slug and all existing document URLs. New entries use descriptive, lowercase slugs. Treat published slugs as permanent so shared links keep working; document records use the owning department or section slug. Empty placeholder URLs (`division-02` through `division-23`) have been replaced by the named libraries.
 
