@@ -345,11 +345,12 @@ export default function FlipbookReader({
         </button>
         <button
           type="button"
+          className="icon-button"
           disabled={!ready || page <= 1 || error}
           aria-label={t("Previous page")}
           onClick={() => engine.current?.flipPrev()}
         >
-          ←
+          <Glyph d="m10 3.5-4.5 4.5 4.5 4.5" />
         </button>
         <form
           onSubmit={(event) => {
@@ -376,29 +377,32 @@ export default function FlipbookReader({
         </form>
         <button
           type="button"
+          className="icon-button"
           disabled={!ready || lastVisible >= total || error}
           aria-label={t("Next page")}
           onClick={() => engine.current?.flipNext()}
         >
-          →
+          <Glyph d="m6 3.5 4.5 4.5L6 12.5" />
         </button>
         <span className="flipbook-control-spacer" />
         <button
           type="button"
+          className="icon-button"
           disabled={zoom <= 0.75}
           aria-label={t("Zoom out")}
           onClick={() => setZoom((value) => Math.max(0.75, value - 0.25))}
         >
-          −
+          <Glyph d="M3.5 8h9" />
         </button>
         <output aria-live="polite">{Math.round(zoom * 100)}%</output>
         <button
           type="button"
+          className="icon-button"
           disabled={zoom >= 2}
           aria-label={t("Zoom in")}
           onClick={() => setZoom((value) => Math.min(2, value + 0.25))}
         >
-          +
+          <Glyph d="M8 3.5v9M3.5 8h9" />
         </button>
         <button type="button" onClick={fit}>
           {t("Fit")}
@@ -488,6 +492,24 @@ export default function FlipbookReader({
         )}
       </p>
     </div>
+  );
+}
+
+function Glyph({ d }: { d: string }) {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d={d} />
+    </svg>
   );
 }
 

@@ -1,5 +1,14 @@
 {
+  "link.item.label.Company home": {
+    "message": "会社ホーム"
+  },
+  "link.item.label.Document library": {
+    "message": "資料ライブラリ"
+  },
+  "link.item.label.How to use": {
+    "message": "使い方"
+  },
   "copyright": {
-    "message": "共立 · 資料ライブラリ"
+    "message": "共立 · 資料ライブラリ · システム管理部門が管理"
   }
 }

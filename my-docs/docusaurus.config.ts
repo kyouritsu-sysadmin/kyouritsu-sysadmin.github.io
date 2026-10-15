@@ -2,6 +2,9 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const homeUrl = process.env.HOME_URL || "https://kyouritsu-sysadmin.github.io/";
+const baseUrl = process.env.BASE_URL || "/manuals/";
+// Navbar active state is matched against the full pathname, including baseUrl.
+const libraryHomeRegex = `^${baseUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(ja/)?$`;
 
 const config: Config = {
   title: "Kyoritsu Library",
@@ -50,19 +53,33 @@ const config: Config = {
         { type: "localeDropdown", position: "right" },
         {
           to: "/",
-          label: "Document library",
+          label: "Documents",
           position: "left",
-          activeBaseRegex: "^/$",
+          activeBaseRegex: libraryHomeRegex,
         },
-        { to: "/#divisions", label: "Divisions", position: "left" },
+        {
+          to: "/#divisions",
+          label: "Departments",
+          position: "left",
+          // A hash link would otherwise match every route.
+          activeBaseRegex: "(?!)",
+        },
         {
           to: "/sales/guides/getting-started/",
-          label: "Library guide",
+          label: "How to use",
           position: "right",
         },
       ],
     },
-    footer: { style: "light", copyright: "Kyoritsu · Document library" },
+    footer: {
+      style: "light",
+      links: [
+        { label: "Company home", href: homeUrl },
+        { label: "Document library", to: "/" },
+        { label: "How to use", to: "/sales/guides/getting-started/" },
+      ],
+      copyright: "Kyoritsu · Document library · Maintained by System Administration",
+    },
     docs: { sidebar: { hideable: true } },
   } satisfies Preset.ThemeConfig,
 };

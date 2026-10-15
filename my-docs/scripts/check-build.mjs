@@ -56,9 +56,7 @@ for (const locale of ["en", "ja"]) {
   }
   const home = page(
     "",
-    locale === "ja"
-      ? japanese.ui["A place for every document."]
-      : "A place for every document.",
+    locale === "ja" ? japanese.ui["Document library"] : "Document library",
   );
   assert(
     home.includes(`href="${base}ja/"`),
