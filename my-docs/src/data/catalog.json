@@ -1,0 +1,234 @@
+{
+  "divisions": [
+    {
+      "slug": "sales",
+      "name": "Head Office Sales",
+      "japanese": "本社営業",
+      "romaji": "Honsha Eigyō",
+      "description": "Manuals, guides, and documents for Head Office Sales."
+    },
+    {
+      "slug": "design",
+      "name": "Design Department",
+      "japanese": "設計部",
+      "romaji": "Sekkei-bu",
+      "description": "Manuals, guides, and documents for Design Department."
+    },
+    {
+      "slug": "electrical-design",
+      "name": "Electrical Design Section",
+      "japanese": "電気設計課",
+      "romaji": "Denki Sekkei-ka",
+      "description": "Manuals, guides, and documents for Electrical Design Section.",
+      "parent": "design"
+    },
+    {
+      "slug": "structural-design",
+      "name": "Structural Design Section",
+      "japanese": "構造設計課",
+      "romaji": "Kōzō Sekkei-ka",
+      "description": "Manuals, guides, and documents for Structural Design Section.",
+      "parent": "design"
+    },
+    {
+      "slug": "production-management",
+      "name": "Production Management Department",
+      "japanese": "生産管理部",
+      "romaji": "Seisan Kanri-bu",
+      "description": "Manuals, guides, and documents for Production Management Department."
+    },
+    {
+      "slug": "production-scheduling",
+      "name": "Production Scheduling Section",
+      "japanese": "工程課",
+      "romaji": "Kōtei-ka",
+      "description": "Manuals, guides, and documents for Production Scheduling Section.",
+      "parent": "production-management"
+    },
+    {
+      "slug": "materials",
+      "name": "Materials Section",
+      "japanese": "資材課",
+      "romaji": "Shizai-ka",
+      "description": "Manuals, guides, and documents for Materials Section.",
+      "parent": "production-management"
+    },
+    {
+      "slug": "general-affairs",
+      "name": "General Affairs Department",
+      "japanese": "総務部",
+      "romaji": "Sōmu-bu",
+      "description": "Manuals, guides, and documents for General Affairs Department."
+    },
+    {
+      "slug": "ai-iot",
+      "name": "AI/IoT Group",
+      "japanese": "AI/IOTグループ",
+      "romaji": "AI/IoT Gurūpu",
+      "description": "Manuals, guides, and documents for AI/IoT Group."
+    },
+    {
+      "slug": "manufacturing",
+      "name": "Manufacturing Department",
+      "japanese": "製造部",
+      "romaji": "Seizō-bu",
+      "description": "Manuals, guides, and documents for Manufacturing Department."
+    },
+    {
+      "slug": "processing",
+      "name": "Processing Section",
+      "japanese": "加工課",
+      "romaji": "Kakō-ka",
+      "description": "Manuals, guides, and documents for Processing Section.",
+      "parent": "manufacturing"
+    },
+    {
+      "slug": "frame",
+      "name": "Frame Section",
+      "japanese": "フレーム課",
+      "romaji": "Furēmu-ka",
+      "description": "Manuals, guides, and documents for Frame Section.",
+      "parent": "manufacturing"
+    },
+    {
+      "slug": "thin-sheet-metal-1",
+      "name": "Thin Sheet Metal Section 1",
+      "japanese": "薄物1課",
+      "romaji": "Usumono Ichi-ka",
+      "description": "Manuals, guides, and documents for Thin Sheet Metal Section 1.",
+      "parent": "manufacturing"
+    },
+    {
+      "slug": "painting",
+      "name": "Painting Section",
+      "japanese": "塗装課",
+      "romaji": "Tosō-ka",
+      "description": "Manuals, guides, and documents for Painting Section.",
+      "parent": "manufacturing"
+    },
+    {
+      "slug": "wiring",
+      "name": "Wiring Department",
+      "japanese": "配線部",
+      "romaji": "Haisen-bu",
+      "description": "Manuals, guides, and documents for Wiring Department."
+    },
+    {
+      "slug": "wiring-a1",
+      "name": "Wiring Section A-1",
+      "japanese": "A-1課",
+      "romaji": "A Ichi-ka",
+      "description": "Manuals, guides, and documents for Wiring Section A-1.",
+      "parent": "wiring"
+    },
+    {
+      "slug": "wiring-a2-a3",
+      "name": "Wiring Section A-2 (A-3)",
+      "japanese": "A-2課（A-3課）",
+      "romaji": "A Ni-ka (A San-ka)",
+      "description": "Manuals, guides, and documents for Wiring Section A-2 (A-3).",
+      "parent": "wiring"
+    },
+    {
+      "slug": "wiring-b1-b2",
+      "name": "Wiring Section B-1 (B-2)",
+      "japanese": "B-1課（B-2課）",
+      "romaji": "B Ichi-ka (B Ni-ka)",
+      "description": "Manuals, guides, and documents for Wiring Section B-1 (B-2).",
+      "parent": "wiring"
+    },
+    {
+      "slug": "wiring-b3",
+      "name": "Wiring Section B-3",
+      "japanese": "B-3課",
+      "romaji": "B San-ka",
+      "description": "Manuals, guides, and documents for Wiring Section B-3.",
+      "parent": "wiring"
+    },
+    {
+      "slug": "inspection",
+      "name": "Inspection Department",
+      "japanese": "検査部",
+      "romaji": "Kensa-bu",
+      "description": "Manuals, guides, and documents for Inspection Department."
+    },
+    {
+      "slug": "quality-environment",
+      "name": "Quality and Environmental Management Department",
+      "japanese": "品質環境管理部",
+      "romaji": "Hinshitsu Kankyō Kanri-bu",
+      "description": "Manuals, guides, and documents for Quality and Environmental Management Department."
+    },
+    {
+      "slug": "engineering",
+      "name": "Engineering Department",
+      "japanese": "エンジニアリング部",
+      "romaji": "Enjiniaringu-bu",
+      "description": "Manuals, guides, and documents for Engineering Department."
+    },
+    {
+      "slug": "tokyo",
+      "name": "Tokyo Branch",
+      "japanese": "東京支店",
+      "romaji": "Tōkyō Shiten",
+      "description": "Manuals, guides, and documents for Tokyo Branch."
+    },
+    {
+      "slug": "osaka",
+      "name": "Osaka Branch",
+      "japanese": "大阪支店",
+      "romaji": "Ōsaka Shiten",
+      "description": "Manuals, guides, and documents for Osaka Branch."
+    },
+    {
+      "slug": "fukuoka",
+      "name": "Fukuoka Branch",
+      "japanese": "福岡支店",
+      "romaji": "Fukuoka Shiten",
+      "description": "Manuals, guides, and documents for Fukuoka Branch."
+    }
+  ],
+  "categories": [
+    {
+      "slug": "manual",
+      "name": "Manuals"
+    },
+    {
+      "slug": "guides",
+      "name": "Guides"
+    },
+    {
+      "slug": "policies",
+      "name": "Policies"
+    },
+    {
+      "slug": "forms",
+      "name": "Forms"
+    }
+  ],
+  "documents": [
+    {
+      "slug": "sales-training",
+      "division": "sales",
+      "category": "manual",
+      "title": "Sales training manual",
+      "description": "営業講習マニュアル · Japanese sales training reference.",
+      "format": "PDF",
+      "language": "日本語",
+      "updated": "2026-10-13",
+      "file": "files/sales/sales-training-ja.pdf"
+    },
+    {
+      "slug": "getting-started",
+      "division": "sales",
+      "category": "guides",
+      "title": "Using the document library",
+      "description": "A sample guide to finding, reading, and sharing team documents.",
+      "format": "Guide",
+      "language": "English",
+      "updated": "2026-10-15",
+      "source": "content/sales/guides/getting-started.md",
+      "sample": true
+    }
+  ]
+}

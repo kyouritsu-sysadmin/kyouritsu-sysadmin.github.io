@@ -1,4 +1,4 @@
-name: Build and publish company home
+name: Build and publish company site
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: company-home-${{ github.ref }}
+  group: company-site-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -19,11 +19,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - run: npm run build && npm run check
-      - uses: actions/upload-pages-artifact@v3
+          cache: npm
+          cache-dependency-path: my-docs/package-lock.json
+      - name: Install document library dependencies
+        run: npm --prefix my-docs ci
+      - name: Build and validate homepage and manuals
+        run: npm run build
+      - uses: actions/upload-pages-artifact@v4
         if: github.event_name == 'workflow_dispatch'
         with:
-          path: dist
+          path: _site
 
   deploy:
     needs: build
