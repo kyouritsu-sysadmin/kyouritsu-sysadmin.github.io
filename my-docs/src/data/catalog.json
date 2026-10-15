@@ -229,6 +229,17 @@
       "updated": "2026-10-15",
       "source": "content/sales/guides/getting-started.md",
       "sample": true
+    },
+    {
+      "slug": "electrical-design-practical-guide",
+      "division": "electrical-design",
+      "category": "manual",
+      "title": "Electrical Design Practical Guide",
+      "description": "Lecture by Deputy Manager Atsuchi English Edition ",
+      "format": "PDF",
+      "language": "English",
+      "updated": "2026-10-15",
+      "file": "files/electrical-design/007-Atsuchi-Electrical_Design_Practical_Guide_English-20261015-en.pdf"
     }
   ]
 }
