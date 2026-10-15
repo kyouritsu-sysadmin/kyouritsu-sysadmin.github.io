@@ -564,8 +564,9 @@ body {
 .file-reader-pdf {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - var(--reader-top, 300px) - 16px);
-  height: calc(100dvh - var(--reader-top, 300px) - 16px);
+  /* Keep a readable document area regardless of the heading above it. */
+  height: clamp(560px, 78vh, 1000px);
+  height: clamp(560px, 78dvh, 1000px);
   min-height: var(--reader-min-height, 320px);
 }
 .file-reader-pdf > .reader-toolbar,
@@ -841,7 +842,7 @@ select:focus-visible {
   min-width: 0;
   overflow: auto;
   min-height: 0;
-  padding: 24px;
+  padding: 12px;
   outline-offset: -3px;
 }
 .flipbook-sizing {

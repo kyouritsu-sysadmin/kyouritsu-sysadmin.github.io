@@ -26,12 +26,6 @@ export default function DocumentFile({
       ),
     );
     const resize = () => {
-      // Include the document heading and metadata above the viewer, while
-      // keeping the fit stable as the user scrolls through the document page.
-      const top = element.getBoundingClientRect().top + window.scrollY;
-      const value = `${Math.ceil(top)}px`;
-      if (element.style.getPropertyValue("--reader-top") !== value)
-        element.style.setProperty("--reader-top", value);
       // On short/mobile screens, allow normal page scrolling instead of
       // letting wrapped controls squeeze the document area down to zero.
       const minimum = `${Math.ceil(
