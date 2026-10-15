@@ -24,6 +24,27 @@
       "status": "available"
     },
     {
+      "id": "seaweed-wiki",
+      "icon": "database",
+      "title": {
+        "en": "SeaweedFS Infrastructure Wiki",
+        "ja": "SeaweedFS インフラ Wiki"
+      },
+      "description": {
+        "en": "Self-hosted SeaweedFS documentation — architecture, S3 API, secure on-premise Docker deployment, Filer setup, and operational guides.",
+        "ja": "社内ホスト型 SeaweedFS ドキュメント — アーキテクチャ、S3 API、オンプレミス Docker セキュア構築、Filer 設定、運用ガイド。"
+      },
+      "button": {
+        "en": "Open wiki",
+        "ja": "Wiki を開く"
+      },
+      "href": {
+        "en": "https://kyouritsu-sysadmin.github.io/seaweed_wiki/docs/",
+        "ja": "https://kyouritsu-sysadmin.github.io/seaweed_wiki/docs/"
+      },
+      "status": "available"
+    },
+    {
       "id": "training",
       "icon": "training",
       "title": {
