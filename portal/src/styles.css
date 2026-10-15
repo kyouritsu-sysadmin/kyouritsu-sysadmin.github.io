@@ -259,30 +259,36 @@ h1 span {
 
 /* Service list */
 .card-grid {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface);
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
 }
 .resource-card {
   display: grid;
-  grid-template-columns: 40px minmax(0, 1fr) auto;
+  grid-template-columns: 40px minmax(0, 1fr);
   grid-template-areas:
-    "icon title action"
-    "icon text action";
+    "icon title"
+    "icon text"
+    "action action";
   column-gap: 16px;
   row-gap: 4px;
-  align-items: center;
-  padding: 18px 20px;
+  align-items: start;
+  padding: 18px 20px 20px;
   margin: 0;
-}
-.resource-card + .resource-card {
-  border-top: 1px solid var(--line-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgba(36, 54, 75, 0.06);
+  transition:
+    border-color 0.12s,
+    box-shadow 0.12s;
 }
 .resource-card.available:hover {
-  background: var(--paper);
+  border-color: var(--color-sky);
+  box-shadow: 0 4px 12px rgba(36, 54, 75, 0.1);
+}
+.resource-card .card-action {
+  padding-top: 12px;
 }
 .card-top {
   display: contents;
@@ -436,22 +442,21 @@ html[lang="ja"] h1 {
   h1 {
     font-size: 26px;
   }
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
   .resource-card {
     grid-template-columns: 36px minmax(0, 1fr);
-    grid-template-areas:
-      "icon title"
-      "icon text"
-      "action action";
     padding: 16px;
     row-gap: 6px;
   }
   .card-icon {
     width: 36px;
     height: 36px;
-    align-self: start;
   }
-  .card-action {
-    padding-top: 6px;
+  .resource-card .card-action {
+    padding-top: 8px;
   }
   .button {
     width: 100%;

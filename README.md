@@ -49,17 +49,17 @@ Open `http://127.0.0.1:3000/`. The preview uses a separate output directory and 
 
 ## Publishing
 
-The root `.github/workflows/pages.yml` builds and validates pull requests. It publishes only on **manual dispatch from the default branch** of `kyouritsu-sysadmin/kyouritsu-sysadmin.github.io`. Pushing a feature branch, opening a PR, or merging does not publish automatically.
+The root `.github/workflows/pages.yml` builds, validates, and publishes automatically on **pushes to `main`** in `kyouritsu-sysadmin/kyouritsu-sysadmin.github.io`, including pull request merges. Feature-branch pushes and pull requests do not trigger builds. There is no manual workflow trigger. A direct push to `main` also triggers publication; use pull requests for the normal update process.
 
-1. Open a pull request with the migration branch and wait for the build to pass.
-2. Merge into `main`.
-3. In Settings → Pages, select GitHub Actions as the source.
-4. Run Actions → Build and publish company site from `main`.
+1. Run `npm run build` locally before opening a pull request.
+2. Review and merge the pull request into `main`.
+3. Keep Settings → Pages → Source set to GitHub Actions.
+4. Follow Actions → Build and publish company site; it starts automatically after the merge. Deployment runs only if the build and validation succeed.
 5. Verify `/`, `/ja/`, `/manuals/`, `/manuals/ja/`, direct document links and PDF downloads.
 
-The workflow uploads only `_site/`; deployment permissions are restricted to the deployment job. For the initial cutover, disable the old `manuals` repository deployment workflow and unpublish its Pages site after the combined deployment is ready, then verify `/manuals/` is served by the new artifact. Keep the old repository as a backup. These remote changes are not performed by the build scripts.
+The workflow uploads only `_site/`; deployment permissions are restricted to the deployment job. For the initial cutover, disable the old `manuals` repository deployment workflow and disable its Pages site (Settings → Pages → Source: Deploy from a branch → Branch: None → Save) after the combined deployment is ready, then verify `/manuals/` is served by the new artifact. Unpublishing alone retains the old Pages configuration. Keep the old repository as a backup. These remote changes are not performed by the build scripts.
 
-For later content updates, commit the changes, merge, and run this single workflow. To roll back, revert the source commit on `main` and rerun the workflow.
+For later content updates, commit the changes, push the feature branch, and merge its pull request. The combined build and deployment then run automatically. To roll back, merge a revert into `main`; that also triggers publication. If a build fails, the previous successful deployment remains live.
 
 ## Homepage cards
 

@@ -1,6 +1,6 @@
 # Kyoritsu Library
 
-See the [repository guide](../README.md) for development, content authoring, division configuration, validation, and manual GitHub Pages deployment.
+See the [repository guide](../README.md) for development, content authoring, division configuration, validation, and automatic GitHub Pages deployment after merging into `main`.
 
 ```sh
 npm ci
@@ -93,7 +93,8 @@ different `file`. Without a Japanese entry, the catalog text is used.
 
 4. From the repository root, run `npm run build`. It validates the metadata,
    file paths, and both languages. Commit the attachment and catalog changes,
-   open a PR into `main`, then publish using the root deployment workflow.
+   open a PR into `main`, and merge it. The root workflow then builds, validates,
+   and publishes both sites automatically.
 
 The example document routes are:
 
