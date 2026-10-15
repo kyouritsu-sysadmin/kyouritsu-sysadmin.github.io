@@ -1,0 +1,488 @@
+{
+  "sidebar.sales.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.sales.link.Head Office Sales overview": {
+    "message": "本社営業の資料"
+  },
+  "sidebar.sales.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.sales.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.sales.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.sales.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.design.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.design.link.Design Department overview": {
+    "message": "設計部の資料"
+  },
+  "sidebar.design.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.design.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.design.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.design.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.electrical-design.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.electrical-design.link.Electrical Design Section overview": {
+    "message": "電気設計課の資料"
+  },
+  "sidebar.electrical-design.link.Design Department overview": {
+    "message": "設計部の資料"
+  },
+  "sidebar.electrical-design.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.electrical-design.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.electrical-design.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.electrical-design.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.structural-design.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.structural-design.link.Structural Design Section overview": {
+    "message": "構造設計課の資料"
+  },
+  "sidebar.structural-design.link.Design Department overview": {
+    "message": "設計部の資料"
+  },
+  "sidebar.structural-design.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.structural-design.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.structural-design.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.structural-design.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.production-management.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.production-management.link.Production Management Department overview": {
+    "message": "生産管理部の資料"
+  },
+  "sidebar.production-management.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.production-management.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.production-management.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.production-management.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.production-scheduling.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.production-scheduling.link.Production Scheduling Section overview": {
+    "message": "工程課の資料"
+  },
+  "sidebar.production-scheduling.link.Production Management Department overview": {
+    "message": "生産管理部の資料"
+  },
+  "sidebar.production-scheduling.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.production-scheduling.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.production-scheduling.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.production-scheduling.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.materials.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.materials.link.Materials Section overview": {
+    "message": "資材課の資料"
+  },
+  "sidebar.materials.link.Production Management Department overview": {
+    "message": "生産管理部の資料"
+  },
+  "sidebar.materials.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.materials.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.materials.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.materials.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.general-affairs.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.general-affairs.link.General Affairs Department overview": {
+    "message": "総務部の資料"
+  },
+  "sidebar.general-affairs.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.general-affairs.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.general-affairs.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.general-affairs.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.ai-iot.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.ai-iot.link.AI/IoT Group overview": {
+    "message": "AI/IOTグループの資料"
+  },
+  "sidebar.ai-iot.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.ai-iot.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.ai-iot.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.ai-iot.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.manufacturing.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.manufacturing.link.Manufacturing Department overview": {
+    "message": "製造部の資料"
+  },
+  "sidebar.manufacturing.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.manufacturing.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.manufacturing.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.manufacturing.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.processing.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.processing.link.Processing Section overview": {
+    "message": "加工課の資料"
+  },
+  "sidebar.processing.link.Manufacturing Department overview": {
+    "message": "製造部の資料"
+  },
+  "sidebar.processing.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.processing.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.processing.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.processing.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.frame.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.frame.link.Frame Section overview": {
+    "message": "フレーム課の資料"
+  },
+  "sidebar.frame.link.Manufacturing Department overview": {
+    "message": "製造部の資料"
+  },
+  "sidebar.frame.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.frame.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.frame.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.frame.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.thin-sheet-metal-1.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.thin-sheet-metal-1.link.Thin Sheet Metal Section 1 overview": {
+    "message": "薄物1課の資料"
+  },
+  "sidebar.thin-sheet-metal-1.link.Manufacturing Department overview": {
+    "message": "製造部の資料"
+  },
+  "sidebar.thin-sheet-metal-1.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.thin-sheet-metal-1.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.thin-sheet-metal-1.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.thin-sheet-metal-1.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.painting.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.painting.link.Painting Section overview": {
+    "message": "塗装課の資料"
+  },
+  "sidebar.painting.link.Manufacturing Department overview": {
+    "message": "製造部の資料"
+  },
+  "sidebar.painting.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.painting.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.painting.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.painting.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.wiring.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.wiring.link.Wiring Department overview": {
+    "message": "配線部の資料"
+  },
+  "sidebar.wiring.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.wiring.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.wiring.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.wiring.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.wiring-a1.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.wiring-a1.link.Wiring Section A-1 overview": {
+    "message": "A-1課の資料"
+  },
+  "sidebar.wiring-a1.link.Wiring Department overview": {
+    "message": "配線部の資料"
+  },
+  "sidebar.wiring-a1.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.wiring-a1.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.wiring-a1.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.wiring-a1.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.wiring-a2-a3.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.wiring-a2-a3.link.Wiring Section A-2 (A-3) overview": {
+    "message": "A-2課（A-3課）の資料"
+  },
+  "sidebar.wiring-a2-a3.link.Wiring Department overview": {
+    "message": "配線部の資料"
+  },
+  "sidebar.wiring-a2-a3.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.wiring-a2-a3.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.wiring-a2-a3.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.wiring-a2-a3.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.wiring-b1-b2.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.wiring-b1-b2.link.Wiring Section B-1 (B-2) overview": {
+    "message": "B-1課（B-2課）の資料"
+  },
+  "sidebar.wiring-b1-b2.link.Wiring Department overview": {
+    "message": "配線部の資料"
+  },
+  "sidebar.wiring-b1-b2.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.wiring-b1-b2.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.wiring-b1-b2.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.wiring-b1-b2.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.wiring-b3.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.wiring-b3.link.Wiring Section B-3 overview": {
+    "message": "B-3課の資料"
+  },
+  "sidebar.wiring-b3.link.Wiring Department overview": {
+    "message": "配線部の資料"
+  },
+  "sidebar.wiring-b3.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.wiring-b3.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.wiring-b3.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.wiring-b3.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.inspection.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.inspection.link.Inspection Department overview": {
+    "message": "検査部の資料"
+  },
+  "sidebar.inspection.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.inspection.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.inspection.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.inspection.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.quality-environment.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.quality-environment.link.Quality and Environmental Management Department overview": {
+    "message": "品質環境管理部の資料"
+  },
+  "sidebar.quality-environment.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.quality-environment.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.quality-environment.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.quality-environment.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.engineering.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.engineering.link.Engineering Department overview": {
+    "message": "エンジニアリング部の資料"
+  },
+  "sidebar.engineering.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.engineering.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.engineering.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.engineering.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.tokyo.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.tokyo.link.Tokyo Branch overview": {
+    "message": "東京支店の資料"
+  },
+  "sidebar.tokyo.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.tokyo.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.tokyo.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.tokyo.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.osaka.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.osaka.link.Osaka Branch overview": {
+    "message": "大阪支店の資料"
+  },
+  "sidebar.osaka.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.osaka.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.osaka.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.osaka.category.Forms": {
+    "message": "様式"
+  },
+  "sidebar.fukuoka.link.← All divisions": {
+    "message": "← すべての部門"
+  },
+  "sidebar.fukuoka.link.Fukuoka Branch overview": {
+    "message": "福岡支店の資料"
+  },
+  "sidebar.fukuoka.category.Manuals": {
+    "message": "マニュアル"
+  },
+  "sidebar.fukuoka.category.Guides": {
+    "message": "ガイド"
+  },
+  "sidebar.fukuoka.category.Policies": {
+    "message": "規程"
+  },
+  "sidebar.fukuoka.category.Forms": {
+    "message": "様式"
+  }
+}

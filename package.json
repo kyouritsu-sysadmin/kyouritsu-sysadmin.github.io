@@ -1,11 +1,12 @@
 {
-  "name": "kyoritsu-home",
+  "name": "kyoritsu-company-site",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "build:preview": "node portal/scripts/preview.mjs"
   },
   "engines": {
     "node": ">=24"
