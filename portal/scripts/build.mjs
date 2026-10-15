@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -99,25 +100,30 @@ function cardMarkup(card, locale) {
     <div class="card-action">${available ? `<a class="button" href="${text(card.href[locale])}">${text(card.button[locale])}${arrow}</a>` : `<button class="button" type="button" disabled aria-describedby="${card.id}-title">${ui.planned}</button>`}</div>
   </article>`;
 }
+// Version the entire asset tree so relative CSS imports and fonts also refresh.
+const source = path.join(root, "src");
+const hash = createHash("sha256");
+function hashDirectory(directory, prefix = "") {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true }).sort((a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0)) {
+    const relative = prefix + entry.name;
+    const file = path.join(directory, entry.name);
+    if (entry.isDirectory()) hashDirectory(file, relative + "/");
+    else hash.update(relative).update("\0").update(fs.readFileSync(file)).update("\0");
+  }
+}
+hashDirectory(source);
+const assetPath = `/assets/${hash.digest("hex").slice(0, 16)}`;
 fs.rmSync(output, { recursive: true, force: true });
-fs.mkdirSync(path.join(output, "assets"), { recursive: true });
-for (const file of ["styles.css", "theme.css", "logo.svg"])
-  fs.copyFileSync(
-    path.join(root, "src", file),
-    path.join(output, "assets", file),
-  );
-fs.cpSync(path.join(root, "src/fonts"), path.join(output, "assets/fonts"), {
-  recursive: true,
-});
+fs.cpSync(source, path.join(output, assetPath), { recursive: true });
 fs.writeFileSync(path.join(output, ".nojekyll"), "");
 for (const locale of ["en", "ja"]) {
   const ui = labels[locale];
   const home = locale === "ja" ? "/ja/" : "/";
   const manuals = locale === "ja" ? "/manuals/ja/" : "/manuals/";
   const html = `<!doctype html>
-<html lang="${locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${ui.title} | Kyoritsu</title><meta name="description" content="${text(ui.intro)}"><link rel="canonical" href="${text(config.siteUrl + home)}"><link rel="alternate" hreflang="en" href="${text(config.siteUrl)}/"><link rel="alternate" hreflang="ja" href="${text(config.siteUrl)}/ja/"><link rel="icon" type="image/svg+xml" href="/assets/logo.svg"><link rel="stylesheet" href="/assets/styles.css"></head>
+<html lang="${locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${ui.title} | Kyoritsu</title><meta name="description" content="${text(ui.intro)}"><link rel="canonical" href="${text(config.siteUrl + home)}"><link rel="alternate" hreflang="en" href="${text(config.siteUrl)}/"><link rel="alternate" hreflang="ja" href="${text(config.siteUrl)}/ja/"><link rel="icon" type="image/svg+xml" href="${assetPath}/logo.svg"><link rel="stylesheet" href="${assetPath}/styles.css"></head>
 <body><a class="skip-link" href="#main">${ui.skip}</a>
-<header class="site-header"><div class="header-inner"><a class="brand" href="${home}" aria-label="Kyoritsu ${ui.home}"><img src="/assets/logo.svg" width="34" height="34" alt=""><span>${text(config.name)}</span></a><nav aria-label="${ui.navigation}"><a href="${home}" class="active" aria-current="page">${ui.home}</a><a href="${manuals}">${ui.manuals}</a></nav><div class="language" role="group" aria-label="${ui.language}"><a href="/" lang="en" ${locale === "en" ? 'aria-current="page"' : ""}>EN</a><span aria-hidden="true">/</span><a href="/ja/" lang="ja" ${locale === "ja" ? 'aria-current="page"' : ""}>日本語</a></div></div></header>
+<header class="site-header"><div class="header-inner"><a class="brand" href="${home}" aria-label="Kyoritsu ${ui.home}"><img src="${assetPath}/logo.svg" width="34" height="34" alt=""><span>${text(config.name)}</span></a><nav aria-label="${ui.navigation}"><a href="${home}" class="active" aria-current="page">${ui.home}</a><a href="${manuals}">${ui.manuals}</a></nav><div class="language" role="group" aria-label="${ui.language}"><a href="/" lang="en" ${locale === "en" ? 'aria-current="page"' : ""}>EN</a><span aria-hidden="true">/</span><a href="/ja/" lang="ja" ${locale === "ja" ? 'aria-current="page"' : ""}>日本語</a></div></div></header>
 <main id="main"><section class="hero" aria-labelledby="welcome"><div><p class="eyebrow">${ui.workspace}</p><h1 id="welcome">${ui.heading}</h1><p class="intro">${ui.intro}</p></div><p class="hero-detail"><span></span>${ui.note}</p><aside class="quick-links" aria-labelledby="quick"><h2 id="quick">${ui.quick}</h2><ul><li><a href="/manuals/" hreflang="en">${ui.libraryEn}</a></li><li><a href="/manuals/ja/" hreflang="ja">${ui.libraryJa}</a></li><li><a href="${locale === "ja" ? "/manuals/ja/sales/guides/getting-started/" : "/manuals/sales/guides/getting-started/"}">${ui.guide}</a></li></ul></aside></section>
 <section class="resources" aria-labelledby="resources"><div class="section-heading"><h2 id="resources">${ui.resources}</h2><span>${ui.section}</span></div><div class="card-grid">${config.cards.map((card) => cardMarkup(card, locale)).join("\n")}</div></section>
 </main><footer><div><span>${ui.footer}</span><span>${ui.maintained}</span></div></footer></body></html>`;

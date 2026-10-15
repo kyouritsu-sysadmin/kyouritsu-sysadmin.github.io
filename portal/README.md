@@ -36,4 +36,4 @@ Reference: [GitHub user/organization sites and project sites](https://docs.githu
 
 ## Shared visual theme
 
-`src/theme.css` contains the approved blue palette and typography tokens. `src/styles.css` styles the home page. Mona Sans, Hubot Sans, and Noto Sans JP are bundled in `src/fonts/` with their licenses; the build copies all assets into `dist/assets/`. The manuals generator also consumes this theme and these fonts. Both sites are published together.
+`src/theme.css` contains the approved blue palette and typography tokens. `src/styles.css` styles the home page. Mona Sans, Hubot Sans, and Noto Sans JP are bundled in `src/fonts/` with their licenses; the build copies all assets into `dist/assets/<content-hash>/`. The HTML, stylesheets, logo, and font imports use this shared versioned directory so a new asset revision does not reuse cached files from an older deployment. Already-open pages and cached HTML may still need a reload; this does not control GitHub Pages cache headers. The manuals generator also consumes this theme and these fonts. Both sites are published together.

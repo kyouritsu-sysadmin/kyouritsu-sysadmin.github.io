@@ -1,8 +1,9 @@
 name: Build and publish company site
 
 on:
-  pull_request:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -26,14 +27,13 @@ jobs:
       - name: Build and validate homepage and manuals
         run: npm run build
       - uses: actions/upload-pages-artifact@v5
-        if: github.event_name == 'workflow_dispatch'
         with:
           path: _site
           include-hidden-files: true
 
   deploy:
     needs: build
-    if: github.event_name == 'workflow_dispatch' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && github.event.repository.name == format('{0}.github.io', github.repository_owner)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.event.repository.name == format('{0}.github.io', github.repository_owner)
     runs-on: ubuntu-latest
     permissions:
       pages: write
