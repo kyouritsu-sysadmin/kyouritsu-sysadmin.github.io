@@ -196,6 +196,12 @@
       "description": "チームの資料を探し、閲覧し、共有するためのサンプルガイド。",
       "language": "日本語",
       "source": "content/ja/sales/guides/getting-started.md"
+    },
+    "electrical-design/manual/electrical-design-practical-guide": {
+      "title": "電気設計の実務解説書",
+      "description": "厚地次長講習・日本語版",
+      "language": "日本語",
+      "file": "files/electrical-design/007-[JP]厚地次長-電気設計の実務解説書_日本語-20261015-ja.pdf"
     }
   }
 }
