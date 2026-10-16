@@ -49,6 +49,20 @@ Open `http://127.0.0.1:3000/`. The preview uses a separate output directory and 
 
 ## Publishing
 
+To commit and open a pull request from the command line, edit `COMMIT_MESSAGE`
+in `scripts/create-pr.sh`, then run:
+
+```sh
+bash scripts/create-pr.sh
+```
+
+The script stages **all non-ignored changes**, commits them, pushes the current
+feature branch to `company-site`, and creates a PR into `main`. If that branch
+already has an open PR, it prints its URL instead of creating a duplicate.
+With no new changes, it pushes existing commits and proceeds to the PR step.
+GitHub CLI must be installed and signed in (`gh auth login`). Review `git status`
+before running. The script does not merge or directly deploy anything.
+
 The root `.github/workflows/pages.yml` builds, validates, and publishes automatically on **pushes to `main`** in `kyouritsu-sysadmin/kyouritsu-sysadmin.github.io`, including pull request merges. Feature-branch pushes and pull requests do not trigger builds. There is no manual workflow trigger. A direct push to `main` also triggers publication; use pull requests for the normal update process.
 
 1. Run `npm run build` locally before opening a pull request.
