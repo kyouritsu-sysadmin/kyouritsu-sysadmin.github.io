@@ -199,6 +199,12 @@
       "description": "厚地次長講習・日本語版",
       "language": "日本語",
       "file": "files/electrical-design/007-[JP]厚地次長-電気設計の実務解説書_日本語-20261015-ja.pdf"
+    },
+    "materials/manual/materials-section-operations-manual": {
+      "title": "資材課業務マニュアル",
+      "description": "新入社員向け講習記録と実務手順",
+      "language": "日本語",
+      "file": "files/materials/008-[JP]小八重次長-資材課業務マニュアル_日本語-20261016.pdf"
     }
   }
 }
